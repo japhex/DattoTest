@@ -16,6 +16,8 @@ I've used the following to complete the test:
 ### General
 I've followed the instructions and ensured that the test meets all of the criteria. It may seem a bit overkill in places, but I've endeavoured to start the test as if it was an app that would begin to scale out. So getting things like theming and re-usable utils working when you see a use case for them in the future is always useful.
 
+Overall I've tried to demonstrate holistic thinking about the application as a whole opposed to a single page and include a few concepts across the board. 
+
 ### State management
 
 Again for the perspective of speed and simplicity, I've opted to just use React Context in its purest form. I absolutely could've used Redux but for the amount of boilerplate code and the fact that we're only dealing with 1 store object here, I didn't deem it necessary. The downside is that the current state of the application isn't persisted through refreshes, but it is persisted through app use - so you can alter the state and navigate through the 2 nav options whilst still maintaining it. A more robust solution if the data were to be persisted and shared between the application would certainly be redux and/or an actual backend with stored data.

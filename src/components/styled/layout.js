@@ -52,7 +52,7 @@ export const NavigationStyled = styled.nav`
 
 export const MenuContainer = styled.div`
   position: absolute;
-  left: 15px;
+  left: ${props => props.theme.spacing.padding.default}px;
   top: 17px;
   cursor: pointer;
 `

@@ -5,6 +5,6 @@ export const GlobalStyle = createGlobalStyle`
   ${reset}
   
   html {
-  overflow: hidden;
+    overflow: hidden;
   }
 `
