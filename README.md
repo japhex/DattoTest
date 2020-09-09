@@ -1,68 +1,37 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Stack
 
-## Available Scripts
+I've used the following to complete the test:
 
-In the project directory, you can run:
+- [Create React App](https://github.com/facebook/create-react-app) - purely for speed purposes, I favour [Next.js](https://nextjs.org/) for my personal projects but did not want to add bloat or hide anything as it helps a lot with some basics!
+- [styled-components](https://styled-components.com/) - generally my go-to for styling nowadays within the apps I build
+- [react-query](https://github.com/tannerlinsley/react-query) - This I've heard a lot about recently from a couple of colleagues and in honesty wanted to try it out, I'm barely using it and it could easily be ommitted! I'm planning on delving deeper into it's caching etc. but what I do like is its implementation, its very similar to how apollo's hooks work with GraphQL and I've loved working with those
+- [prettier](https://prettier.io/) - standard again on all of my projects to tidy and align code to all be the same standards 
 
-### `yarn start`
+## My thinking
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### General
+I've followed the instructions and ensured that the test meets all of the criteria. It may seem a bit overkill in places, but I've endeavoured to start the test as if it was an app that would begin to scale out. So getting things like theming and re-usable utils working when you see a use case for them in the future is always useful.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### State management
 
-### `yarn test`
+Again for the perspective of speed and simplicity, I've opted to just use React Context in its purest form. I absolutely could've used Redux but for the amount of boilerplate code and the fact that we're only dealing with 1 store object here, I didn't deem it necessary. The downside is that the current state of the application isn't persisted through refreshes, but it is persisted through app use - so you can alter the state and navigate through the 2 nav options whilst still maintaining it. A more robust solution if the data were to be persisted and shared between the application would certainly be redux and/or an actual backend with stored data.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Responsive
 
-### `yarn build`
+I made the decision to do a hybrid at tablet here, the instructon stipulate that the logo should only reduce for mobile devices. You'll notice that the width of the film blocks change at tablet **and** mobile, and ideally I wanted the logo to do the same, the only reason it isn't is because you guys have stipulated **only** mobile.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Testing
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+I haven't included any tests with the app, I'm not sure if this is something that is expected or not - **if it is, I'm more than happy to go away and add some**. There isn't really any logic involved in pure functions, so unit tests would not have a huge place aside from some of the functions in the styled components files. Likewise I could create some snapshot/screenshot style tests for the components themselves - this is usually an informed decision made around how useful they will be and how much the app and its components will change over time.  
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Types
 
-### `yarn eject`
+I've been working heavily with Typescript for the past 1.5 years and have integrated it into some of my personal projects too (see [NextHeroes](https://github.com/japhex/NextHeroes)). Again as we were only dealing with 1 endpoint here and essentially a simple application to start, I didn't want to muddy it with interfaces and typings all over the place, but if this was an app that was going to scale and introduce more then it would be a welcomed addition!
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Closing
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+If there is anything that is unclear please do not hesitate to reach out, this is the kind of test that you can easily spend **a lot** of time on, I'm hoping I've completed enough to show my thinking and approach to certain things, but also demonstrate clear experience in working with React and the frameworks used.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Thanks!
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+The app is deployed on [Vercel](https://vercel.com/) here for ease of use [https://datto-test.vercel.app](https://datto-test.vercel.app)

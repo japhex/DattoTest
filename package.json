@@ -13,7 +13,6 @@
     "react-query-devtools": "^2.4.7",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
-    "recoil": "0.0.10",
     "styled-components": "^5.2.0",
     "styled-reset": "^4.2.3"
   },
