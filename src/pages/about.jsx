@@ -4,7 +4,8 @@ import { ContentStyled } from 'components/styled/layout'
 
 export const About = () => (
   <ContentStyled>
-    <h1>About the app</h1>
-    <h2>Technology/Frameworks</h2>
+    <p>
+      <a href="https://github.com/japhex/DattoTest">Github Repo</a>
+    </p>
   </ContentStyled>
 )

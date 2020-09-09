@@ -18,7 +18,9 @@ Again for the perspective of speed and simplicity, I've opted to just use React 
 
 ### Responsive
 
-I made the decision to do a hybrid at tablet here, the instructon stipulate that the logo should only reduce for mobile devices. You'll notice that the width of the film blocks change at tablet **and** mobile, and ideally I wanted the logo to do the same, the only reason it isn't is because you guys have stipulated **only** mobile.
+I made the decision to do a hybrid at tablet here, the instruction stipulates that the logo should only reduce for mobile devices. You'll notice that the width of the film blocks change at tablet **and** mobile, and ideally I wanted the logo to do the same, the only reason it isn't is because you guys have stipulated **only** mobile.
+
+You'll notice the navigation doesn't do anything at mobile/tablet breakpoints - I haven't wired this up to display/hide etc. I just wanted to demonstrate that I had thought about it and also include a mechanism to detect screen size in components and conditionally render code. 
 
 ### Testing
 

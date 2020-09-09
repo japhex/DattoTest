@@ -16,7 +16,7 @@ export const HeaderStyled = styled.header`
   justify-content: center;
   box-sizing: border-box;
 
-  @media ${props => props.theme.breakpoints.tabletUp} {
+  @media ${props => props.theme.breakpoints.desktopUp} {
     justify-content: flex-start;
   }
 `
@@ -44,13 +44,15 @@ export const ContentStyled = styled.div`
 `
 
 export const NavigationStyled = styled.nav`
-  display: none;
   padding: ${props => props.theme.spacing.padding.default}px;
   box-sizing: border-box;
   flex: 0 0 200px;
   border-right: ${props => props.theme.borders.default};
+`
 
-  @media ${props => props.theme.breakpoints.desktopUp} {
-    display: block;
-  }
+export const MenuContainer = styled.div`
+  position: absolute;
+  left: 15px;
+  top: 17px;
+  cursor: pointer;
 `

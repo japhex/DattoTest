@@ -13,21 +13,26 @@ import { Header } from 'global/components/header'
 import { Footer } from 'global/components/footer'
 import { ContentArea } from 'global/components/contentArea'
 import { Navigation } from 'components/navigation'
+import useMediaQuery from './hooks/useMediaQuery'
 
-export default App => (
-  <FilmsProvider>
-    <ThemeProvider theme={appTheme}>
-      <GlobalStyle />
-      <Layout>
-        <Header />
-        <ContentArea>
+export default App => {
+  const isDesktop = useMediaQuery(appTheme.breakpoints.desktopUp)
+
+  return (
+    <FilmsProvider>
+      <ThemeProvider theme={appTheme}>
+        <GlobalStyle />
+        <Layout>
           <Router>
-            <Navigation />
-            {routes}
+            <Header />
+            <ContentArea>
+              {isDesktop && <Navigation />}
+              {routes}
+            </ContentArea>
+            <Footer />
           </Router>
-        </ContentArea>
-        <Footer />
-      </Layout>
-    </ThemeProvider>
-  </FilmsProvider>
-)
+        </Layout>
+      </ThemeProvider>
+    </FilmsProvider>
+  )
+}

@@ -7,3 +7,7 @@ export const LogoIcon = styled.svg`
     width: 160px;
   }
 `
+
+export const MenuIcon = styled.svg`
+  fill: ${props => props.theme.colors.white};
+`
