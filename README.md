@@ -1,3 +1,7 @@
+#Running the app locally
+
+``yarn && yarn start``
+
 ## Stack
 
 I've used the following to complete the test:
